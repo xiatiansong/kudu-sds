@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: nosql-kudu-gateway
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+server:
+  port: 30012
