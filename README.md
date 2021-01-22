@@ -24,7 +24,7 @@ for (int i = 0; i < 100; i++) {
   map.put("attribute_name", "device_fw_ver");
   //map.put("id", i + 2000);
   long start = System.currentTimeMillis();
-  Map<String, Object> result = kuduDataTemplate.getRow("miotkd", table, map);
+  Map<String, Object> result = kuduDataTemplate.getRow("test", table, map);
   long stop = System.currentTimeMillis();
   System.out.println("单条查询耗时：" + (stop - start));
   System.out.println(result);
@@ -48,7 +48,7 @@ for (int i = 0; i < 200; i++) {
 }
 for (int i = 0; i < 1000; i++) {
   long start = System.currentTimeMillis();
-  kdt.insertRowList("bd", "devicecurrentattribute", rows);
+  kdt.insertRowList("test", "devicecurrentattribute", rows);
   long stop = System.currentTimeMillis();
   System.out.println(stop - start);
 }
